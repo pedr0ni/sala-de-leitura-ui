@@ -13,6 +13,8 @@ Vue.component('Spinner', Spinner)
 
 Vue.config.productionTip = false
 
+Vue.prototype.$fakeDelay = 1000
+
 new Vue({
   router,
   store,

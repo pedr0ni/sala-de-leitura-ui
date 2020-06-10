@@ -44,7 +44,7 @@ export default {
             setTimeout(() => {
                 Snackbar.show('Nome de usuário ou senha incorreto(s)...')
                 this.isLoading = false
-            }, 3000)
+            }, this.$fakeDelay)
         }
     }
 }

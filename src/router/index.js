@@ -3,10 +3,12 @@ import VueRouter from 'vue-router'
 
 import Home from '../views/Home.vue'
 
+import Dashboard from '../views/Dashboard/Dashboard'
+import Overview from '../views/Dashboard/Overview'
+
 import Authentication from '../views/Authentication/Authentication'
-import Login from '../views/Authentication/Login.vue'
-import Register from '../views/Authentication/Register.vue'
-import Complete from '../views/Authentication/Complete.vue'
+import Login from '../views/Authentication/Login'
+import Register from '../views/Authentication/Register'
 
 Vue.use(VueRouter)
 
@@ -29,11 +31,17 @@ const routes = [
         path: 'register',
         name: 'Register',
         component: Register
-      },
+      }
+    ]
+  },
+  {
+    path: '/dashboard',
+    component: Dashboard,
+    children: [
       {
-        path: 'complete',
-        name: 'Complete',
-        component: Complete
+        path: 'overview',
+        name: 'Overview',
+        component: Overview
       }
     ]
   }

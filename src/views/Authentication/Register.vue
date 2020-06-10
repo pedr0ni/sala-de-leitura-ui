@@ -1,11 +1,16 @@
 <template>
-    <div>
+    <Complete 
+    title="TUDO OK!" 
+    content="Um e-mail foi enviado para sua caixa de entrada. Verifique para completar seu registro." 
+    buttonText="ENTRAR" 
+    v-if="hasFinished"/>
+    <div v-else>
         <h1 class="login-title">Nova Conta</h1>
         <img src="~@/assets/img/register-placeholder.png" alt="">
         <div class="login-card-form">
             <div class="input-holder">
-                <label>Nome Completo</label>
-                <input type="text" placeholder="Jonh Doe">
+                <label>RA</label>
+                <input type="text" placeholder="XXXXX">
             </div>
             <div class="input-holder mt-20">
                 <label>Email</label>
@@ -16,12 +21,13 @@
                 <input type="password" placeholder="********">
             </div>
 
-            <button v-if="!isLoading" class="primary-button ripple mt-20" @click="login">
-                CRIAR
-            </button>
-            <button v-else class="primary-button ripple mt-20">
+            <button v-if="isLoading" class="primary-button ripple mt-20">
                 <Spinner size="small" />
             </button>
+            <button v-else class="primary-button ripple mt-20" @click="login">
+                CRIAR
+            </button>
+            
 
             <router-link to="login" class="centered-link">Já possui uma conta? Entrar</router-link>
         </div>
@@ -30,23 +36,26 @@
 
 <script>
 import Snackbar from '../../components/Snackbar'
+import Complete from './Complete'
+
 export default {
     data() {
         return {
-            isLoading: false
+            isLoading: false,
+            hasFinished: false
         }
     },
     methods: {
         login() {
-            
             this.isLoading = true
             setTimeout(() => {
                 this.isLoading = false
-                this.$router.push({
-                    name: 'Complete'
-                })
-            }, 3000)
+                this.hasFinished = true
+            }, this.$fakeDelay)
         }
+    },
+    components: {
+        Complete
     }
 }
 </script>
