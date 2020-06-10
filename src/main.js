@@ -4,6 +4,13 @@ import './registerServiceWorker'
 import router from './router'
 import store from './store'
 
+import './assets/css/style.css'
+import './assets/css/utility.css'
+
+import Spinner from './components/Spinner.vue'
+
+Vue.component('Spinner', Spinner)
+
 Vue.config.productionTip = false
 
 new Vue({
