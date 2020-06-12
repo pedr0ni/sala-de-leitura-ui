@@ -5,6 +5,7 @@ import Home from '../views/Home.vue'
 
 import Dashboard from '../views/Dashboard/Dashboard'
 import Overview from '../views/Dashboard/Overview'
+import Books from '../views/Dashboard/Books'
 
 import Authentication from '../views/Authentication/Authentication'
 import Login from '../views/Authentication/Login'
@@ -42,6 +43,11 @@ const routes = [
         path: 'overview',
         name: 'Overview',
         component: Overview
+      },
+      {
+        path: 'books',
+        name: 'Books',
+        component: Books
       }
     ]
   }

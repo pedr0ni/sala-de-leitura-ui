@@ -8,8 +8,12 @@ import './assets/css/style.css'
 import './assets/css/utility.css'
 
 import Spinner from './components/Spinner.vue'
+import Icon from './components/Icon.vue'
+import EmptyState from './components/EmptyState.vue'
 
 Vue.component('Spinner', Spinner)
+Vue.component('Icon', Icon)
+Vue.component('EmptyState', EmptyState)
 
 Vue.config.productionTip = false
 

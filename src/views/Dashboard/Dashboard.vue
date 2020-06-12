@@ -18,8 +18,30 @@
                 </router-link>
             </div>
         </header>
-
-        <router-view class="dashboard" />
+        <div class="dashboard">
+            <h6 class="headline-6 mb-20">{{ $route.name }}</h6>
+            <transition name="slide-fade">
+                <router-view />
+            </transition>
+        </div>
+        
     </div>
 
 </template>
+
+<script>
+export default {
+    data () {
+        return {
+            transitionName: 'slide-left'
+        }
+    },
+    watch: {
+        '$route' (to, from) {
+            const toDepth = to.path.split('/').length
+            const fromDepth = from.path.split('/').length
+            this.transitionName = toDepth < fromDepth ? 'slide-right' : 'slide-left'
+        }
+    }
+}
+</script>

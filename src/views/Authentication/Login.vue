@@ -3,11 +3,11 @@
         <h1 class="login-title">SALA DE LEITURA</h1>
         <img src="~@/assets/img/login-placeholder.png" alt="">
         <div class="login-card-form">
-            <div class="input-holder">
+            <div class="input-holder login-input">
                 <label>Email</label>
                 <input type="text" placeholder="exemplo@exemplo.com">
             </div>
-            <div class="input-holder mt-20">
+            <div class="input-holder login-input mt-20">
                 <label>SENHA</label>
                 <input type="password" placeholder="********">
             </div>
@@ -17,10 +17,10 @@
                 <label for="test">Mantenha-me logado</label>
             </div>
 
-            <button v-if="!isLoading" class="primary-button ripple mt-20" @click="login">
+            <button v-if="!isLoading" class="primary-button login-button ripple mt-20" @click="login">
                 ACESSAR
             </button>
-            <button v-else class="primary-button ripple mt-20">
+            <button v-else class="primary-button login-button ripple mt-20">
                 <Spinner size="small" />
             </button>
 

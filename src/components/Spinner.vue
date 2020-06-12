@@ -8,7 +8,7 @@
 export default {
 	props: {
 		size: String,
-		hasColor: Boolean
+		hasColor: Boolean,
 	},
 	data() {
 		return {

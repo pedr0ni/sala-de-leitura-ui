@@ -48,6 +48,12 @@ html, body, #app {
 	background: #EEE;
 }
 
+.dashboard {
+	margin: auto;
+	width: 80%;
+	padding: 20px 0;
+}
+
 input, label {
     font-family: 'Roboto', sans-serif;
     letter-spacing: 0.5px;
@@ -90,7 +96,8 @@ input, label {
 
 .input-holder {
     display: flex;
-    flex-direction: column;
+	flex-direction: column;
+	height: 100%;
 }
 
 .input-holder label {
@@ -101,11 +108,29 @@ input, label {
 
 .input-holder input {
     outline: none;
-    padding: 16px 10px;
-    margin-top: 5px;
+    padding: 0 10px;
     font-size: 16px;
     border: 1px solid #E0E0E0;
-    border-radius: 5px;
+	border-radius: 5px;
+	height: 100%;
+}
+
+.input-holder.icon-input {
+	position: relative;
+}
+
+.input-holder.icon-input input{
+	padding-left: 40px;
+}
+
+.input-holder.icon-input i {
+	position: absolute;
+	display: flex;
+	top: 0;
+	left: 10px;
+	height: 100%;
+	align-items: center;
+	color: #757575;
 }
 
 .primary-button {
@@ -115,7 +140,8 @@ input, label {
     justify-content: center;
     align-items: center;
     width: 100%;
-    padding: 20px;
+	padding: 0 20px;
+	height: 100%;
     border-radius: 5px;
     font-size: 14px;
     letter-spacing: 1.25px;
@@ -123,6 +149,11 @@ input, label {
     cursor: pointer;
 	transition: all .5s ease;
 	text-transform: uppercase;
+}
+
+.primary-button.button-icon {
+	justify-content: space-between;
+	padding: 0 35px;
 }
 
 .login-spinner {
@@ -337,6 +368,7 @@ input, label {
 	font-size: 16px;
 	letter-spacing: .5px;
 	padding: 0 15px;
+	transition: color .5s ease;
 }
 
 .menu-items a.router-link-active {
@@ -366,3 +398,96 @@ input, label {
 .menu-icons a i {
 	font-size: 38px;
 }
+
+.headline-6, .table-responsive thead tr td {
+	color: #424242;
+	font-size: 20px;
+	font-weight: 500;
+	letter-spacing: .15px;
+}
+
+.table-responsive thead tr td {
+	text-transform: uppercase;
+}
+
+.action-holder {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: space-between;
+	height: 40px;
+	margin-bottom: 40px;
+}
+
+.action-holder button {
+	width: 210px;
+}
+
+.action-holder .input-holder {
+	width: 420px;
+}
+
+.login-input {
+	height: 80px;
+}
+
+.login-button {
+	height: 60px;
+}
+
+.table-responsive {
+	width: 100%;
+}
+
+.table-responsive {
+	border-collapse: separate;
+	border-spacing: 0 10px;
+	animation: entryTable .5s ease;
+}
+
+.table-responsive tbody tr {
+	background-color: #FFF;
+	height: 65px;
+	border-radius: 5px;
+}
+
+.table-responsive tbody tr td {
+	color: #757575;
+	font-size: 16px;
+	letter-spacing: .5px;
+}
+
+.table-responsive tbody tr td i {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.table-responsive td {
+	text-align: center;
+}
+
+.table-responsive thead tr {
+	height: 50px;
+}
+
+@keyframes entryTable {
+	from {
+		transform: translateY(-80px);
+		opacity: 0;
+	} 
+	to {
+		transform: translateY(0);
+		opacity: 1;
+	}
+}
+
+.spinner-holder {
+	display: flex;
+	justify-content: center;
+}
+
+.table-responsive tbody tr:first-child td:first-child { border-top-left-radius: 5px; }
+.table-responsive tbody tr:first-child td:last-child { border-top-right-radius: 5px; }
+.table-responsive tbody tr:last-child td:first-child { border-bottom-left-radius: 5px; }
+.table-responsive tbody tr:last-child td:last-child { border-bottom-right-radius: 5px; }

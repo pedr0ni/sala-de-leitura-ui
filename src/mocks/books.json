@@ -1,0 +1,38 @@
+[
+    {
+        "bookId": 1,
+        "name": "O menino do pijama listrado",
+        "author": "Author name",
+        "category": "Category name",
+        "pages": 220,
+        "shelf": 1,
+        "createdAt": "10/06/2020 22:30"
+    },
+    {
+        "bookId": 2,
+        "name": "Linguagem C",
+        "author": "Author name",
+        "category": "Programação",
+        "pages": 500,
+        "shelf": 1,
+        "createdAt": "10/06/2020 22:30"
+    },
+    {
+        "bookId": 3,
+        "name": "SQL",
+        "author": "Author name",
+        "category": "Banco de Dados",
+        "pages": 310,
+        "shelf": 1,
+        "createdAt": "10/06/2020 22:30"
+    },
+    {
+        "bookId": 4,
+        "name": "Other book",
+        "author": "Author name",
+        "category": "Category name",
+        "pages": 220,
+        "shelf": 1,
+        "createdAt": "10/06/2020 22:30"
+    }
+]
