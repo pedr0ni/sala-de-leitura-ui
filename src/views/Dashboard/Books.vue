@@ -5,7 +5,7 @@
                 <Icon name="search" />
                 <input type="text" placeholder="Buscar por livros...">
             </div>
-            <button class="primary-button button-icon">
+            <button class="primary-button">
                 <Icon name="add" />
                 CADASTRAR
             </button>
@@ -14,8 +14,9 @@
         <div class="spinner-holder" v-if="isLoading">
             <Spinner :hasColor="true" size="large" v-if="isLoading" />
         </div>
-        <EmptyState v-else-if="books.length == 0" />
-        <table class="table-responsive" v-else>
+        <EmptyState icon="add" title="Ops..." content="Adicione um livro agora" v-else-if="books.length == 0" />
+        <div v-else>
+            <table class="table-responsive">
                 <thead>
                     <tr>
                         <td>#ID</td>
@@ -45,6 +46,7 @@
                 </tbody>
 
             </table>
+        </div>
     </div>
 </template>
 
@@ -61,7 +63,7 @@ export default {
     methods: {
         loadData() {
             this.isLoading = true
-            this.books = booksMock
+            //this.books = booksMock
             setTimeout(() => {
                 this.isLoading = false
             }, this.$fakeDelay)

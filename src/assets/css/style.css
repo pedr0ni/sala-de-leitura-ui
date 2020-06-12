@@ -151,7 +151,7 @@ input, label {
 	text-transform: uppercase;
 }
 
-.primary-button.button-icon {
+.primary-button {
 	justify-content: space-between;
 	padding: 0 35px;
 }
@@ -491,3 +491,11 @@ input, label {
 .table-responsive tbody tr:first-child td:last-child { border-top-right-radius: 5px; }
 .table-responsive tbody tr:last-child td:first-child { border-bottom-left-radius: 5px; }
 .table-responsive tbody tr:last-child td:last-child { border-bottom-right-radius: 5px; }
+
+.empty-holder {
+	display: flex;
+	width: 100%;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
