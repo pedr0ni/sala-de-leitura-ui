@@ -5,7 +5,12 @@ import Home from '../views/Home.vue'
 
 import Dashboard from '../views/Dashboard/Dashboard'
 import Overview from '../views/Dashboard/Overview'
-import Books from '../views/Dashboard/Books'
+
+import DefaultRouter from '../views/DefaultRouter'
+
+import ItemList from '../views/Dashboard/Library/ItemList'
+import ItemCreate from '../views/Dashboard/Library/ItemCreate'
+import ItemInfo from '../views/Dashboard/Library/ItemInfo' 
 
 import Authentication from '../views/Authentication/Authentication'
 import Login from '../views/Authentication/Login'
@@ -16,8 +21,7 @@ Vue.use(VueRouter)
 const routes = [
   {
     path: '/',
-    name: 'Home',
-    component: Home
+    redirect: '/dashboard/overview'
   },
   {
     path: '/authentication',
@@ -45,9 +49,25 @@ const routes = [
         component: Overview
       },
       {
-        path: 'books',
-        name: 'Books',
-        component: Books
+        path: 'library',
+        component: DefaultRouter,
+        children: [
+          {
+            path: '',
+            name: 'dashboard.library.list',
+            component: ItemList
+          },
+          {
+            path: 'create',
+            name: 'dashboard.library.create',
+            component: ItemCreate
+          },
+          {
+            path: ':id',
+            name: 'dashboard.library.info',
+            component: ItemInfo
+          }
+        ]
       }
     ]
   }

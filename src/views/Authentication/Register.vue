@@ -21,10 +21,10 @@
                 <input type="password" placeholder="********">
             </div>
 
-            <button v-if="isLoading" class="primary-button ripple mt-20">
+            <button v-if="isLoading" class="button primary-button ripple mt-20">
                 <Spinner size="small" />
             </button>
-            <button v-else class="primary-button ripple mt-20" @click="login">
+            <button v-else class="button primary-button ripple mt-20" @click="login">
                 CRIAR
             </button>
             

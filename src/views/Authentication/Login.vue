@@ -17,10 +17,10 @@
                 <label for="test">Mantenha-me logado</label>
             </div>
 
-            <button v-if="!isLoading" class="primary-button login-button ripple mt-20" @click="login">
+            <button v-if="!isLoading" class="button primary-button login-button ripple mt-20" @click="login">
                 ACESSAR
             </button>
-            <button v-else class="primary-button login-button ripple mt-20">
+            <button v-else class="button primary-button login-button ripple mt-20">
                 <Spinner size="small" />
             </button>
 

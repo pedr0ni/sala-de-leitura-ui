@@ -31,11 +31,11 @@ const Snackbar = {
             setTimeout(() => {
                 snackbar.remove()
             }, 600) // Effect time + 100ms
-            callback()
         }
 
         button.addEventListener('click', (event) => {
             close()
+            callback()
         })
 
         setTimeout(() => {

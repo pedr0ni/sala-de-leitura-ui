@@ -107,3 +107,12 @@
     transform: translateX(120px);
     opacity: 0;
 }
+
+i {
+	outline: none !important;
+	user-select: none !important;
+}
+
+.w-33 {
+    width: 33%;
+}
