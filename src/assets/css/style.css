@@ -553,12 +553,27 @@ input, label {
 	font-size: 32px;
 }
 
+.form-info-holder .input-holder {
+	margin: 15px 0;
+}
+
 .form-holder .input-holder {
 	height: 65px;
 }
 
 .form-holder {
 	display: flex;
+}
+
+.form-item {
+	background: #FFFF;
+    padding: 20px 0;
+	border-radius: 10px;
+}
+
+.form-holder.form-item {
+	flex-direction: column;
+	align-items: center;
 }
 
 .image-holder {
